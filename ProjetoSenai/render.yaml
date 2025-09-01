@@ -1,0 +1,23 @@
+# Este é o nosso "mapa" para a Render.
+# Ele define os dois serviços: a API (backend) e o Site Estático (frontend).
+
+services:
+  # Serviço para o Backend (API)
+  - type: web
+    name: senai-tarefas-api
+    env: node
+    # Diz à Render para olhar DENTRO da pasta 'backend'
+    rootDir: backend
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    plan: free # Usa o plano gratuito
+
+  # Serviço para o Frontend (Site Estático)
+  - type: static
+    name: senai-tarefas-app
+    # Diz à Render para olhar DENTRO da pasta 'frontend'
+    rootDir: frontend
+    # Não precisamos de um comando de construção para o nosso HTML/CSS simples
+    # A Render vai simplesmente publicar os ficheiros que encontrar.
+    plan: free # Usa o plano gratuito
+
