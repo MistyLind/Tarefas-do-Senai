@@ -1,0 +1,194 @@
+/* ARQUIVO: frontend/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* --- ESTILOS PARA A NAVEGAÇÃO DAS ABAS --- */
+nav {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 25px;
+}
+nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    color: #0288d1;
+}
+nav a.active {
+    color: #0288d1;
+    border-bottom-color: #0288d1;
+}
+
+/* --- CLASSE PARA ESCONDER AS ABAS INATIVAS --- */
+main.hidden {
+    display: none;
+}
+
+
+h1 {
+    text-align: center;
+    color: #0288d1;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+#inicio p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.form-tarefa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#input-tarefa {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #b0e0e6;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#input-tarefa:focus {
+    border-color: #0288d1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.2);
+}
+
+#btn-adicionar {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btn-adicionar:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eceff1;
+    transition: background-color 0.3s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #f8fcfd;
+}
+
+li.concluida {
+    background-color: #e8f5e9;
+}
+
+li.concluida span {
+    text-decoration: line-through;
+    color: #888;
+    font-style: italic;
+}
+
+li span {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.botoes-tarefa {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-concluir {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-concluir:hover {
+    background-color: #0056b3;
+}
+
+li.concluida .btn-concluir {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+li.concluida .btn-concluir:hover {
+    background-color: #e0a800;
+}
+
+.btn-deletar {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-deletar:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85em;
+    color: #777;
+}
