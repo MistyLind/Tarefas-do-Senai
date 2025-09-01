@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Tarefas do Senai</title> <!-- Título corrigido -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#" id="link-inicio" class="active">Início</a>
+            <a href="#" id="link-tarefas">Tarefas</a>
+        </nav>
+
+        <main id="inicio">
+            <h1>Olá, tudo bem?</h1>
+            <p>Este é o seu gestor de tarefas pessoal do Senai. Use o menu acima para navegar até à sua lista de tarefas.</p>
+        </main>
+
+        <main id="tarefas" class="hidden">
+            <h1>Tarefas do Senai</h1>
+            <div class="form-tarefa">
+                <input type="text" id="input-tarefa" placeholder="Adicione uma nova tarefa...">
+                <button id="btn-adicionar">Adicionar</button>
+            </div>
+            <ul id="lista-tarefas">
+                <!-- As tarefas da API aparecerão aqui -->
+            </ul>
+        </main>
+        
+        <!-- O rodapé foi removido, como solicitado -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
